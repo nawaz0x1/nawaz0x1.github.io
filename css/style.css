@@ -255,6 +255,16 @@ a:hover { text-decoration: underline; }
 
 .hero-intro { margin-bottom: 1rem; }
 
+.phd-highlight {
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  background: rgba(14, 77, 146, 0.07);
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 1.08rem;
+}
+
 .hero-interests {
   font-size: 0.95rem;
   color: var(--muted);
