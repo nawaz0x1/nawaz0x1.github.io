@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+\usepackage{hyphenat}
+
+% ---------- PAGE GEOMETRY ----------
+\usepackage[letterpaper, top=0.4in, bottom=0.4in, left=0.7in, right=0.7in]{geometry}
+
+% ---------- FONTS ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{microtype}
+
+% ---------- COLOR / LINKS ----------
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{subink}{HTML}{444444}
+\definecolor{rule}{HTML}{555555}
+\definecolor{linkcol}{HTML}{2B4C7E}
+
+\usepackage[colorlinks=true, urlcolor=linkcol, linkcolor=linkcol, citecolor=linkcol, breaklinks=true]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+
+\pagestyle{empty}
+\color{ink}
+
+% ---------- SECTION HEADINGS ----------
+\titleformat{\section}
+  {\normalfont\large\bfseries\scshape\color{ink}}
+  {}{0em}{}
+  [{\color{rule}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% ---------- LIST SPACING ----------
+\setlist[itemize]{leftmargin=14pt, itemsep=0.5pt, topsep=1.5pt, parsep=0pt, partopsep=0pt, label={\small\textbullet}}
+
+% ---------- HELPER COMMANDS ----------
+% \entry{Title/Org}{Location or link, right-aligned}
+% Uses tabularx (not \hfill inside a running paragraph) so long left-hand
+% text and right-hand text can never collide or overlap on the same line.
+\newcommand{\entry}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & \textit{\small #2}
+  \end{tabularx}\vspace{-1pt}
+}
+% \subentry{Role}{Date, right-aligned}
+\newcommand{\subentry}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textit{\small #1} & {\small #2}
+  \end{tabularx}\vspace{1pt}
+}
+
+\setlength{\parindent}{0pt}
+\linespread{0.96}
+
+\begin{document}
+
+% ======================= HEADER =======================
+\begin{center}
+  {\Huge\bfseries\scshape Shah Nawaz Haider}\\[5pt]
+  {\small
+    \href{mailto:nawazwithai@gmail.com}{nawazwithai@gmail.com} \quad$|$\quad
+    \href{https://nawaz.pro.bd}{Website} \quad$|$\quad
+    \href{https://github.com/nawaz0x1}{GitHub} \quad$|$\quad
+    \href{https://scholar.google.com/citations?user=KNOs9BkAAAAJ&hl=en}{Google Scholar} \quad$|$\quad
+    \href{https://www.linkedin.com/in/nawazhaider/}{LinkedIn}
+  }
+\end{center}
+% \vspace{-2pt}
+% {\color{rule}\hrule height 0.8pt}
+% \vspace{4pt}
+
+% ======================= 1. EDUCATION =======================
+\section{Education}
+\entry{University of Science and Technology Chittagong (USTC)}{Chittagong, Bangladesh}\\[1pt]
+\subentry{B.Sc. in Computer Science \& Engineering. CGPA: 3.72/4.00}{May 2026}
+\vspace{2pt}
+\hspace*{14pt}
+\begin{tabular}{@{}l p{0.82\linewidth}@{}}
+\textbf{Thesis:}  & \textit{QuantFlow: A Federated Mamba-Based Post-Transformer Foundation Model for Time-Series Forecasting} \\
+\textbf{Advisor:} & Dr. Hadaate Ullah
+\end{tabular}
+
+
+% ======================= 2. RESEARCH INTERESTS =======================
+\section{Research Interests}
+Foundation Models, World Models, Large Language Models, Agentic Reasoning, Multimodal Learning, Interpretability
+
+% ======================= 3. RESEARCH SUMMARY =======================
+\section{Highlights}
+\begin{itemize}
+  \item 13 peer-reviewed / preprint publications, including 2 as first author.
+  \item Principal Investigator, ResearchBuddy AI, leading two applied NLP research teams.
+  \item Reviewer, \textit{SN Computer Science} (Springer Nature).
+  \item Industry experience building production LLM and ML systems for financial risk modeling at scale.
+\end{itemize}
+
+% ======================= 4. RESEARCH & INDUSTRY EXPERIENCE =======================
+\section{Research \& Industry Experience}
+\entry{Synnax AI}{Dubai, UAE (Remote)}
+\subentry{Data Scientist}{Aug 2024 -- May 2026}
+\begin{itemize}
+  \item Engineered end-to-end ML pipelines for credit risk and default prediction over SEC filings and market data spanning 16{,}000+ public companies.
+  \item Built LLM-powered agents to extract risk signals from 10-K, 10-Q, and 8-K filings, automating detection of high-risk and defaulted entities.
+  \item Converted large-scale unstructured regulatory data into production-ready features within a production MLOps stack.
+\end{itemize}
+\vspace{4pt}
+
+\entry{ResearchBuddy AI (Private Research Lab)}{}
+\subentry{Research Supervisor}{Jul 2026 -- Present}
+\begin{itemize}
+  \item Lead two research teams focused on Bengali Dialect Corpus Enhancement and Edge-Efficient Embedding Models.
+  \item Direct research strategy, oversee benchmarking, and coordinate publication efforts across both teams.
+\end{itemize}
+\vspace{4pt}
+
+\entry{Quantropy}{Chittagong, Bangladesh}
+\subentry{AI/ML Instructor}{Jun 2026 -- Present}
+\begin{itemize}
+  \item Designed and taught an AI curriculum covering deep learning, LLMs, foundation models, and modern generative AI.
+  \item Ran hands-on workshops on transformers, retrieval-augmented generation (RAG), and AI agents.
+\end{itemize}
+\vspace{4pt}
+
+\entry{Omdena}{Milan, Italy (Remote)}
+\subentry{Data Scientist (Part-time)}{May 2024 -- Jul 2024}
+\begin{itemize}
+  \item Built and evaluated ML models for crop optimization and resource allocation from environmental and spatial agricultural datasets.
+\end{itemize}
+\vspace{4pt}
+
+\entry{University of Science and Technology Chittagong (USTC)}{Chittagong, Bangladesh}
+\subentry{Peer Tutor (Part-time)}{Sep 2023 -- Nov 2023}
+\begin{itemize}
+  \item Mentored undergraduates in programming, algorithms, and problem-solving within introductory computer science courses.
+\end{itemize}
+
+% ======================= 5. SELECTED PUBLICATIONS =======================
+\section{Selected Publications}
+\vspace{2pt}
+\textbf{\small First-Author}
+\vspace{2pt}
+\begin{enumerate}[leftmargin=18pt, itemsep=2pt, topsep=2pt, label={[\arabic*]}]
+  \item \textbf{Haider, S.\,N.}, Austin, S., Barua, A., Shawon, S.\,M., \& Ullah, H. QuantFlow: A Federated Mamba-Based Post-Transformer Foundation Model for Time-Series Forecasting. \textit{\href{https://arxiv.org/abs/2607.02632}{arXiv:2607.02632}} (Preprint).
+  \item \textbf{Haider, S.\,N.}, Barua, A., Austin, S., \& Shawon, S.\,M. Lightweight Federated and Explainable AI-Enhanced Crop Yield Forecasting in Heterogeneous Agricultural Systems. \textit{IEEE ICCIT}, 2025. \href{https://doi.org/10.1109/ICCIT68739.2025.11491605}{DOI}
+\end{enumerate}
+
+\vspace{2pt}
+\textbf{\small Selected Co-Authored}
+\vspace{2pt}
+\begin{enumerate}[leftmargin=18pt, itemsep=2pt, topsep=2pt, label={[\arabic*]}]
+  \item Shawon, S.\,M., \textbf{Haider, S.\,N.}, Barua, A., Austin, S., Adan, I.\,A., Hossain, M.\,S., \& Zubair, H.\,T. Hybrid CNN-LSTM Model for Urban Energy Load Forecasting with IGA-XAI for Smart Grids. \textit{Results in Engineering} (Elsevier, Q1), 2025. \href{https://doi.org/10.1016/j.rineng.2025.107245}{DOI}
+  \item Barua, A., \textbf{Haider, S.\,N.}, Austin, S., \& Shawon, S.\,M. Urban Energy Load Dataset of Chattogram: Peak and Off-Peak Variability Insights. \textit{Data in Brief} (Elsevier), 2025. \href{https://doi.org/10.1016/j.dib.2025.112245}{DOI}
+  \item Shawon, S.\,M., Dutta, P., \textbf{Haider, S.\,N.}, Barua, A., Austin, S., \& Adan, I.\,A. Agri-Light-Fed: Lightweight Federated Learning with Explainable AI for Efficient and Privacy-Preserving Crop Yield Prediction. \textit{IEEE ICCIT}, 2025. \href{https://doi.org/10.1109/ICCIT68739.2025.11491295}{DOI}
+  \item Shawon, S.\,M., \textbf{Haider, S.\,N.}, Barua, A., Austin, S., \& Noor, K.\,R. Predictive Modelling for Multi-Location Deep Learning-Based Load Forecasting: An Integrated Approach. \textit{IEEE ICECE}, 2024. \href{https://doi.org/10.1109/ICECE64886.2024.11024879}{DOI}
+  \item Austin, S., \textbf{Haider, S.\,N.}, Shil, R., Lija, N.\,S., \& Noor, K.\,R. Bi-LSTM-RF Based Hybrid Deep Learning Approach to Identify Level of Depression from Bengali Facebook Status. \textit{IEEE ICCIT}, 2024. \href{https://doi.org/10.1109/ICCIT64611.2024.11022340}{DOI}
+  \item Shawon, S.\,M., \textbf{Haider, S.\,N.}, Chakma, A., Alam, M.\,W., Islam, M.\,T., \& Rana, M.\,F. DeepFlowNet: Deep Learning-Based Daily Water Flow Forecasting of Test River. \textit{IEEE PEEIACON}, 2024. \href{https://doi.org/10.1109/PEEIACON63629.2024.10800657}{DOI}
+  \item Shawon, S.\,M., \textbf{Haider, S.\,N.}, Austin, S., \& Barua, A. HybridNet: ResNet50-GRU Integration for Enhanced Rice Leaf Disease Classification in Precision Agriculture. \textit{Springer LNNS (MIET)}, 2024. \href{https://doi.org/10.1007/978-981-96-2721-9_39}{DOI}
+\end{enumerate}
+\vspace{5pt}
+
+{\small\textit{Complete publication list and citation metrics available on Google Scholar.}}
+
+% ======================= 6. RESEARCH PROJECTS =======================
+\section{Research Projects}
+\entry{Bengali BPE Tokenizer}{\href{https://github.com/nawaz0x1}{GitHub}}
+\begin{itemize}
+  \item Trained a Byte Pair Encoding tokenizer from scratch for Bengali and other non-Latin scripts, achieving 7.33$\times$ fewer tokens than GPT-2 across 3.4 billion characters of the CC-100 Bengali corpus.
+  \item Implemented custom multi-byte UTF-8 and conjunct handling, cutting token inflation and inference cost for under-resourced languages.
+\end{itemize}
+\vspace{4pt}
+
+\entry{Lunar Seismic Data Visualization - NASA International Space Apps Challenge}{\href{https://github.com/nawaz0x1}{GitHub}}
+\begin{itemize}
+  \item Built an interactive web app to visualize lunar seismic data from NASA's Planetary Data System, overlaying mineral composition and Bouguer gravity disturbances against seismic events.
+\end{itemize}
+
+% ======================= PROFESSIONAL SERVICE =======================
+\section{Professional Service}
+\begin{itemize}
+    \item Peer Reviewer, \textit{SN Computer Science}, Springer Nature
+\end{itemize}
+
+% ======================= 8. AWARDS =======================
+\section{Awards}
+\begin{itemize}
+  \item \textbf{Champion, Project Competition} - Research Colloquium, USTC. Chittagong, Bangladesh \hfill \textit{May 2026}
+  \item \textbf{Champion, Poster Competition} - Winter School Colloquium, USTC. Chittagong, Bangladesh \hfill \textit{February 2025}
+  \item \textbf{Regional Champion} - NASA International Space Apps Challenge. Dhaka, Bangladesh \hfill \textit{October 2023}
+\end{itemize}
+
+% ======================= 10. TECHNICAL SKILLS =======================
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Programming} & Python, Java, JavaScript, C/C++, MATLAB, SQL \\[2pt]
+  \textbf{ML / DL} & PyTorch, TensorFlow, Keras, Scikit-learn, XGBoost, Hugging Face Transformers \\[2pt]
+  \textbf{LLM \& Agentic AI} & LangChain, Retrieval-Augmented Generation (RAG), Vector Databases, LoRA/QLoRA \\[2pt]
+  \textbf{Data \& Databases} & Pandas, NumPy, Matplotlib, Plotly, PostgreSQL, MongoDB, Redis \\
+\end{tabularx}
+
+% ======================= 9. LEADERSHIP =======================
+\section{Leadership \& Service}
+\entry{Programming Club, USTC}{Chittagong, Bangladesh}
+\subentry{President}{Jul 2024 -- Jun 2025}
+\begin{itemize}
+  \item Led the university programming club, organizing technical workshops and coding competitions for CS students.
+\end{itemize}
+\vspace{4pt}
+
+\entry{Robotics Society, USTC}{Chittagong, Bangladesh}
+\subentry{Member}{Jul 2023 -- Jun 2025}
+\begin{itemize}
+  \item Architected an autonomous path-following robotic system by optimizing sensor fusion algorithms.
+\end{itemize}
+
+
+% ======================= 11. CERTIFICATIONS =======================
+\section{Certifications}
+\begin{itemize}
+  \item \textbf{Machine Learning Specialization}, Stanford University (Coursera) \hfill \textit{Dec 2023}
+  \item \textbf{Data Analysis with Python}, freeCodeCamp \hfill \textit{Mar 2023}
+\end{itemize}
+\end{document}
