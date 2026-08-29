@@ -165,14 +165,23 @@ Foundation Models, World Models, Large Language Models, Agentic Reasoning, Multi
 
 % ======================= 6. RESEARCH PROJECTS =======================
 \section{Research Projects}
-\entry{Bengali BPE Tokenizer}{\href{https://github.com/nawaz0x1}{GitHub}}
+
+\entry{Qwen-NL2FOL: Natural Language to First-Order Logic Translation}{\href{https://github.com/nawaz0x1/Qwen-NL2FOL}{GitHub}}
+\begin{itemize}
+  \item Distilled step-by-step NL-to-FOL reasoning traces from a large teacher model to build a custom training corpus.
+  \item LoRA fine-tuned a 2B-parameter Qwen student to reason before translating natural language into First-Order Logic.
+  \item Applied GRPO with a custom logical-equivalence reward, matching 13B-parameter LogicLLaMA accuracy on MALLS.
+\end{itemize}
+\vspace{4pt}
+
+\entry{Bengali BPE Tokenizer}{\href{https://github.com/nawaz0x1/Bengali-BPE-Tokenizer}{GitHub}}
 \begin{itemize}
   \item Trained a Byte Pair Encoding tokenizer from scratch for Bengali and other non-Latin scripts, achieving 7.33$\times$ fewer tokens than GPT-2 across 3.4 billion characters of the CC-100 Bengali corpus.
   \item Implemented custom multi-byte UTF-8 and conjunct handling, cutting token inflation and inference cost for under-resourced languages.
 \end{itemize}
 \vspace{4pt}
 
-\entry{Lunar Seismic Data Visualization - NASA International Space Apps Challenge}{\href{https://github.com/nawaz0x1}{GitHub}}
+\entry{Lunar Seismic Data Visualization - NASA International Space Apps Challenge}{\href{https://github.com/nawaz0x1/LunaWave}{GitHub}}
 \begin{itemize}
   \item Built an interactive web app to visualize lunar seismic data from NASA's Planetary Data System, overlaying mineral composition and Bouguer gravity disturbances against seismic events.
 \end{itemize}
